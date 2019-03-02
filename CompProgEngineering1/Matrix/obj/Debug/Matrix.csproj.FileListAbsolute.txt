@@ -1,0 +1,6 @@
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\obj\Debug\Matrix.csprojAssemblyReference.cache
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\bin\Debug\Matrix.dll
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\bin\Debug\Matrix.pdb
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\obj\Debug\Matrix.dll
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\Matrix\obj\Debug\Matrix.pdb

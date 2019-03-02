@@ -1,0 +1,10 @@
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\obj\Debug\MatrixConsoleClient.csproj.CoreCompileInputs.cache
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\bin\Debug\MatrixConsoleClient.exe.config
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\bin\Debug\MatrixConsoleClient.exe
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\bin\Debug\MatrixConsoleClient.pdb
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\bin\Debug\Matrix.dll
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\bin\Debug\Matrix.pdb
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\obj\Debug\MatrixConsoleClient.csprojAssemblyReference.cache
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\obj\Debug\MatrixConsoleClient.csproj.CopyComplete
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\obj\Debug\MatrixConsoleClient.exe
+G:\studying\Компоненты прог инж Смаковский 6 сем\My_labs\CompProgEngineering1\MatrixConsoleClient\obj\Debug\MatrixConsoleClient.pdb
