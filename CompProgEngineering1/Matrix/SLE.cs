@@ -13,12 +13,19 @@ namespace CustomMatrix
     public class SLE : Matrix, ILinearEquation
     {
         [Display(Name = "SLE right-values", Description = "Array of free values")]
-        private double[] values;
+        public double[] values;
 
         public SLE(int Row, int Col):
             base(Row, Col)
         {
             values = new double[Row];
+        }
+
+        public SLE(Matrix mat, double[] xi):
+            base(mat.Rows, mat.Cols)
+        {
+            MatrixArray = mat.MatrixArray;
+            values = xi;
         }
 
         public double[] CalculateEquation()
