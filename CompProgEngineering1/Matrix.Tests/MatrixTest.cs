@@ -1,6 +1,9 @@
 ﻿using CustomMatrix;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MatrixWeb.Models;
+using MatrixWeb.Controllers;
+using Moq;
 
 namespace CustomMatrix.Tests
 {
@@ -11,24 +14,27 @@ namespace CustomMatrix.Tests
         public void DeterminantTest2x2()
         {
             var matrix = GetMockMatrix2x2();
-            
-            Assert.AreEqual(-10.0, matrix.GetDeterminant());
+            var matrixService = new MatrixService();
+
+            Assert.AreEqual(-10.0, matrixService.GetDeterminant(matrix));
         }
 
         [TestMethod()]
         public void DeterminantTest3x3()
         {
             var matrix = GetMockMatrix3x3();
+            var matrixService = new MatrixService();
 
-            Assert.AreEqual(21.0, matrix.GetDeterminant());
+            Assert.AreEqual(21.0, matrixService.GetDeterminant(matrix));
         }
 
         [TestMethod()]
         public void DeterminantTestNotSquareMatrix()
         {
             var matrix = Matrix.Random(2, 3, 0);
+            var matrixService = new MatrixService();
 
-            Assert.ThrowsException<Exception>(() => matrix.GetDeterminant());
+            Assert.ThrowsException<Exception>(() => matrixService.GetDeterminant(matrix));
         }
 
         [TestMethod()]
@@ -38,6 +44,22 @@ namespace CustomMatrix.Tests
 
             Assert.AreEqual(4, matrix.Rows);
             Assert.AreEqual(2, matrix.Cols);
+        }
+
+        [TestMethod]
+        public void TestMatrixControllerDeterminant()
+        {
+            // Arrange
+            var matrixService = new Mock<IDeterminant>();
+            matrixService.Setup(s => s.GetDeterminant(It.IsAny<Matrix>()));
+            var data = new double[1][];
+            data[0] = new double[1];
+
+            // Act
+            new MatrixController(matrixService.Object).Determinant(new MatrixView() { Data = data });
+
+            // Assert
+            matrixService.Verify(o => o.GetDeterminant(It.IsAny<Matrix>()), Times.Once);
         }
 
         private Matrix GetMockMatrix2x2()

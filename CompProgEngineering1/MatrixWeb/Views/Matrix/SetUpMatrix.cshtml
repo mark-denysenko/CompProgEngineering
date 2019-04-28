@@ -1,0 +1,20 @@
+﻿@model MatrixWeb.Models.MatrixView
+
+@{
+    ViewBag.Title = "SetUpMatrix";
+}
+
+<h2>SetUpMatrix</h2>
+
+<p>
+    Choose matrix size:
+</p>
+<form action="SetUpMatrix" method="get">
+    <input name="size" value="@Model.Data.Length" />
+    <input type="submit" value="Calculate Determinant" />
+</form>
+
+@using (Html.BeginForm("Determinant", "Matrix", FormMethod.Post))
+{
+    @Html.Partial("Matrix", Model)
+}

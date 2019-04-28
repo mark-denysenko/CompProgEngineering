@@ -10,7 +10,7 @@ namespace CustomMatrix
     /// <summary>
     ///  СЛАУ
     /// </summary>
-    public class SLE : Matrix, ILinearEquation
+    public class SLE : Matrix
     {
         [Display(Name = "SLE right-values", Description = "Array of free values")]
         public double[] values;
@@ -19,6 +19,12 @@ namespace CustomMatrix
             base(Row, Col)
         {
             values = new double[Row];
+        }
+
+        public SLE(double[][] mat, double[] xi):
+            base(mat)
+        {
+            values = xi;
         }
 
         public SLE(Matrix mat, double[] xi):

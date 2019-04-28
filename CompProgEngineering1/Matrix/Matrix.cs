@@ -32,6 +32,18 @@ namespace CustomMatrix
             }
         }
 
+        public Matrix(double[][] matrix):
+            this(matrix[0].Length, matrix.Length)
+        {
+            for(int cols = 0; cols < Cols; cols++)
+            {
+                for(int rows = 0; rows < Rows; rows++)
+                {
+                    MatrixArray[rows, cols] = matrix[cols][rows];
+                }
+            }
+        }
+
         private static int SignOfElement(int i, int j)
         {
             int sign = ((i + j) % 2 == 0) ? 1 : -1;
@@ -49,12 +61,12 @@ namespace CustomMatrix
             {
                 output = new Matrix(input._row - 1, input._col - 1);
                 int x = 0, y = 0;
-                for (int m = 0; m < input._row; m++, x++) //or _col
+                for (int m = 0; m < input._row; m++, x++)
                 {
                     if (m != i)
                     {
                         y = 0;
-                        for (int n = 0; n < input._row; n++) //or _col
+                        for (int n = 0; n < input._row; n++)
                         {
                             if (n != j)
                             {
@@ -281,6 +293,11 @@ namespace CustomMatrix
                 s += "|\n";
             }
             return s;
+        }
+
+        public double GetDeterminant(Matrix matrix)
+        {
+            throw new NotImplementedException();
         }
     }
 }

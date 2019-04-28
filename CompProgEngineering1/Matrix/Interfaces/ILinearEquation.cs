@@ -8,6 +8,6 @@ namespace CustomMatrix
 {
     public interface ILinearEquation
     {
-        double[] CalculateEquation();
+        double[] CalculateEquation(double[,] X, double[] Y);
     }
 }

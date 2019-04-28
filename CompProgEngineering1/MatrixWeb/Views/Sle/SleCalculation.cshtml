@@ -1,0 +1,20 @@
+﻿@model MatrixWeb.Models.SleView
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    Choose matrix size:
+</p>
+<form action="SleCalculation" method="get">
+    <input name="size" value="@Model.Data.Length" />
+    <input type="submit" value="Calculate Determinant" />
+</form>
+
+@using (Html.BeginForm("SleCalculation", "Sle", FormMethod.Post))
+{
+    @Html.Partial("Sle", Model)
+}

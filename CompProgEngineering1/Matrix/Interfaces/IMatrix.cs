@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomMatrix
 {
-    public interface IMatrix
+    public interface IMatrix : IDeterminant
     {
         int Rows { get; }
         int Cols { get; }

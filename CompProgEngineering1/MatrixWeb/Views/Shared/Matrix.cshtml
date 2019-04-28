@@ -1,0 +1,35 @@
+﻿@model MatrixWeb.Models.MatrixView
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>MatrixView</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <table>
+        @for (int column = 0; column < Model.Data.Length; column++)
+        {
+            <tr>
+                @for (int row = 0; row < Model.Data[column].Length; row++)
+                {
+                    <td>@Html.EditorFor(x => Model.Data[column][row])</td>
+                }
+            </tr>
+        }
+    </table>
+
+    <div>
+        @Html.LabelFor(m => m.Determinant)
+        @Html.DisplayFor(model => model.Determinant)
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit Matrix" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
