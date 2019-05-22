@@ -20,10 +20,8 @@ GROUP BY
 	[spectacles].Title
 ORDER BY [Total Returned Tickets] DESC
 
--- IN WHAT GENRE ACTORS PLAY AT MOST
 
--- CORRELiruyichi
--- LAST Spectacles for each actor
+-- LAST performance date for each actor
 SELECT [main].[ActorId]
 		,[actors].[FirstName]
 		,MAX([lastSpectacle].[Last Spectacle]) AS [Last Event Date]
@@ -39,3 +37,5 @@ GROUP BY
 	[actors].[FirstName]
 ORDER BY 
 	[main].[ActorId]
+
+-- IN WHAT GENRE ACTORS PLAY AT MOST

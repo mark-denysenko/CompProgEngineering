@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MatrixWeb.Patterns;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace CustomMatrix
 {
-    public class Matrix : IMatrix
+    public class Matrix : IMatrix, PrototypeMatrix, IMementoMatrix
     {
         [Display(Name = "Multidemensional array", Description = "Contains double values of matrix")]
         protected double[,] _Mat;
@@ -296,6 +297,21 @@ namespace CustomMatrix
         }
 
         public double GetDeterminant(Matrix matrix)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IMatrix Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MementoMatrix CreateMemento()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetMemento(MementoMatrix memento)
         {
             throw new NotImplementedException();
         }

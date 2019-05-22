@@ -38,7 +38,7 @@ namespace MatrixWeb.Controllers
         [HttpPost]
         public ActionResult Determinant(MatrixView model)
         {
-            var matrix = new Matrix(model.Data);
+            var matrix = new CustomMatrix.Matrix(model.Data);
             model.Determinant = _matrix.GetDeterminant(matrix);
 
             return View("SetUpMatrix", model);

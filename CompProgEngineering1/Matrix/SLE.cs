@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatrixWeb.Patterns;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace CustomMatrix
     /// <summary>
     ///  СЛАУ
     /// </summary>
-    public class SLE : Matrix
+    public class SLE : Matrix, IMementoSle, ICloneable
     {
         [Display(Name = "SLE right-values", Description = "Array of free values")]
         public double[] values;
@@ -106,6 +107,21 @@ namespace CustomMatrix
                 s += "|   " + values[r].ToString("0.0000") + "\n";
             }
             return s;
+        }
+
+        object ICloneable.Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        MementoSle IMementoSle.CreateMemento()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetMemento(MementoSle memento)
+        {
+            throw new NotImplementedException();
         }
     }
 }
